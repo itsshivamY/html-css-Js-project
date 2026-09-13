@@ -1,0 +1,168 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    text-align:center;
+    padding-bottom:20px;
+}
+
+h1{
+    background:#081b31;
+    color:white;
+    padding:20px;
+}
+
+.choices{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:30px;
+    margin-top:50px;
+    padding:0 15px;
+}
+
+.choice{
+    width:120px;
+    height:120px;
+    background:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:60px;
+    cursor:pointer;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.choice:hover{
+    transform:scale(1.1);
+    background:#081b31;
+    color:white;
+}
+
+.score-board{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:80px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.score h2{
+    font-size:50px;
+}
+
+.score p{
+    font-size:20px;
+}
+
+.msg-container{
+    margin-top:40px;
+    padding:0 15px;
+}
+
+#msg{
+    background:#081b31;
+    color:white;
+    padding:15px 25px;
+    border-radius:10px;
+    font-size:22px;
+    display:inline-block;
+}
+
+#reset-btn{
+    margin-top:30px;
+    padding:12px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:8px;
+    background:#ff9800;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#reset-btn:hover{
+    background:#e68900;
+}
+
+/* Tablet */
+
+@media (max-width:768px){
+
+    h1{
+        font-size:1.8rem;
+    }
+
+    .choice{
+        width:100px;
+        height:100px;
+        font-size:50px;
+    }
+
+    .score-board{
+        gap:40px;
+    }
+
+    .score h2{
+        font-size:40px;
+    }
+
+    #msg{
+        font-size:18px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width:480px){
+
+    h1{
+        font-size:1.4rem;
+        padding:15px;
+    }
+
+    .choices{
+        gap:15px;
+        margin-top:30px;
+    }
+
+    .choice{
+        width:80px;
+        height:80px;
+        font-size:35px;
+    }
+
+    .score-board{
+        gap:25px;
+        margin-top:25px;
+    }
+
+    .score h2{
+        font-size:32px;
+    }
+
+    .score p{
+        font-size:16px;
+    }
+
+    #msg{
+        font-size:15px;
+        max-width:90%;
+        padding:12px 15px;
+    }
+
+    #reset-btn{
+        width:80%;
+        max-width:250px;
+        font-size:16px;
+    }
+}
