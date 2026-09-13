@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #212121;
+}
+
+.clock{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: linear-gradient(135deg,#ffb347,#2ecc71);
+    border: 4px solid #f8f3a0;
+    box-shadow: 0 0 25px rgba(255,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #000;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+.clock span{
+    position: absolute;
+    inset: 15px;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--i)));
+}
+
+.clock span b{
+    display: inline-block;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+    transform: rotate(calc(-30deg * var(--i)));
+}
+
+/* Hands */
+.hand{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.hand i{
+    position: absolute;
+    bottom: 50%;
+    width: 4px;
+    height: var(--h);
+    background: var(--clr);
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+
+#hour i{
+    width: 8px;
+}
+
+#min i{
+    width: 5px;
+}
+
+#sec i{
+    width: 3px;
+}
+
+@media(max-width:400px){
+    .clock{
+        width: 280px;
+        height: 280px;
+    }
+
+    .clock span b{
+        font-size: 1.5rem;
+    }
+}

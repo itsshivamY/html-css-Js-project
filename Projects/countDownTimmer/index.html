@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 id="title">We Are Coming Soon 🚀</h1>
+
+    <!-- Input Fields -->
+    <div class="input-box">
+        <input type="number" id="inputDays" placeholder="Days">
+        <input type="number" id="inputHours" placeholder="Hours">
+        <input type="number" id="inputMinutes" placeholder="Minutes">
+        <input type="number" id="inputSeconds" placeholder="Seconds">
+    </div>
+
+    <!-- Buttons -->
+    <div class="btn-box">
+        <button id="startBtn">▶ Start</button>
+        <button id="stopBtn">⏹ Stop</button>
+    </div>
+
+    <!-- Countdown -->
+    <div class="countdown">
+
+        <div class="timer">
+            <span id="days" class="time">00</span>
+            <span class="label">Days</span>
+        </div>
+
+        <div class="timer">
+            <span id="hours" class="time">00</span>
+            <span class="label">Hours</span>
+        </div>
+
+        <div class="timer">
+            <span id="mins" class="time">00</span>
+            <span class="label">Minutes</span>
+        </div>
+
+        <div class="timer">
+            <span id="secs" class="time">00</span>
+            <span class="label">Seconds</span>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

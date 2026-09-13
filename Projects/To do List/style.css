@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    padding:30px;
+}
+
+.container{
+    width:100%;
+    max-width:600px;
+}
+
+.input-container{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.input-container h1{
+    text-align:center;
+    margin-bottom:20px;
+    color:#333;
+}
+
+.row{
+    display:flex;
+    gap:10px;
+}
+
+#inputBox{
+    flex:1;
+    padding:12px;
+    border:2px solid #ddd;
+    border-radius:8px;
+    font-size:16px;
+    transition:0.3s;
+}
+
+#inputBox:focus{
+    outline:none;
+    border-color:#667eea;
+    box-shadow:0 0 10px rgba(102,126,234,0.3);
+}
+
+#addBtn{
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    background:#28a745;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#addBtn:hover{
+    background:#218838;
+    transform:scale(1.05);
+}
+
+#todoList{
+    margin-top:20px;
+}
+
+#todoList li{
+    list-style:none;
+    background:#fff;
+    padding:14px;
+    margin-bottom:12px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:all 0.3s ease;
+    cursor:pointer;
+}
+
+#todoList li:hover{
+    transform:translateY(-5px) scale(1.02);
+    box-shadow:0 12px 30px rgba(102,126,234,0.35);
+    border-left:6px solid #667eea;
+    background:#f8f9ff;
+}
+
+#todoList li p{
+    flex:1;
+    font-size:16px;
+    color:#333;
+    word-break:break-word;
+}
+
+.btn{
+    border:none;
+    padding:8px 14px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.editBtn{
+    background:#ffc107;
+    color:#000;
+}
+
+.editBtn:hover{
+    background:#e0a800;
+    transform:scale(1.05);
+}
+
+.deleteBtn{
+    background:#dc3545;
+    color:#fff;
+}
+
+.deleteBtn:hover{
+    background:#c82333;
+    transform:scale(1.05);
+}
+
+/* Mobile */
+@media screen and (max-width: 480px){
+
+    body{
+        padding: 15px;
+    }
+
+    .input-container{
+        padding: 15px;
+    }
+
+    .input-container h1{
+        font-size: 24px;
+    }
+
+    .row{
+        flex-direction: column;
+    }
+
+    #inputBox{
+        width: 100%;
+    }
+
+    #addBtn{
+        width: 100%;
+    }
+
+    #todoList li{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    #todoList li p{
+        width: 100%;
+    }
+
+    .editBtn,
+    .deleteBtn{
+        width: 100%;
+    }
+}

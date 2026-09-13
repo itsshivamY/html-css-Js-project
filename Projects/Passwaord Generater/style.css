@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right bottom, #ffa585, #45c5d8);
+}
+
+.container{
+    width: 400px;
+    max-width: 90%;
+    padding: 25px 30px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    color: #fff;
+}
+
+.container h1{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.inputBox{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.passBox{
+    width: 100%;
+    padding: 12px 45px 12px 12px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 18px;
+    background: #fff;
+    color: #000;
+}
+
+.inputBox span{
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.inputBox span:hover{
+    color: #0066ff;
+}
+
+#inputSlider{
+    width: 100%;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+    gap: 10px;
+}
+
+.row p,
+.row label{
+    font-size: 16px;
+    flex: 1;
+}
+
+.row input[type="checkbox"]{
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+#sliderValue{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.genBtn{
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #0066ff;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.genBtn:hover{
+    background: #0052cc;
+    transform: translateY(-2px);
+}
+
+.genBtn:active{
+    transform: scale(0.98);
+}
+
+@media (max-width: 480px){
+
+    .container{
+        width: 95%;
+        padding: 20px;
+    }
+
+    .container h1{
+        font-size: 24px;
+    }
+
+    .row{
+        flex-wrap: wrap;
+    }
+
+    .row label,
+    .row p{
+        font-size: 14px;
+    }
+
+    .passBox{
+        font-size: 16px;
+    }
+}

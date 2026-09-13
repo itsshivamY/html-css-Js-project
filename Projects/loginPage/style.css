@@ -1,0 +1,298 @@
+/* Google Font */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#00c6ff);
+    background-size:400% 400%;
+    animation:bgAnimation 12s ease infinite;
+    overflow:hidden;
+}
+
+/* Animated Background */
+
+@keyframes bgAnimation{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+/* Glass Card */
+
+.box{
+
+    width:100%;
+    max-width:400px;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    color:#fff;
+
+    transition:.4s;
+
+    animation:fadeIn .8s ease;
+
+}
+
+/* Fade Animation */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* Hover Effect */
+
+.box:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.3),
+    0 0 20px rgba(255,255,255,.2);
+
+}
+
+/* Heading */
+
+.signup-header{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.signup-header h1{
+
+    font-size:35px;
+
+    margin-bottom:8px;
+
+}
+
+.signup-header p{
+
+    color:rgba(255,255,255,.85);
+
+}
+
+/* Form */
+
+main{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+/* Inputs */
+
+main input{
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    border:1px solid rgba(255,255,255,.2);
+
+    background:rgba(255,255,255,.12);
+
+    color:#fff;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+main input::placeholder{
+
+    color:rgba(255,255,255,.8);
+
+}
+
+main input:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 0 12px rgba(255,255,255,.2);
+
+}
+
+main input:focus{
+
+    outline:none;
+
+    border-color:#00c6ff;
+
+    box-shadow:0 0 15px rgba(0,198,255,.6);
+
+}
+
+/* Button */
+
+main button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    background:linear-gradient(135deg,#5413af,#0072ff);
+
+    transition:.3s;
+
+}
+
+main button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(0,114,255,.5);
+
+}
+
+main button:active{
+
+    transform:scale(.96);
+
+}
+
+/* Footer */
+
+footer{
+
+    text-align:center;
+
+    margin-top:22px;
+
+}
+
+footer p{
+
+    color:rgba(255,255,255,.9);
+
+    font-size:14px;
+
+}
+
+footer a{
+
+    color:#00c6ff;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+footer a:hover{
+
+    color:#fff;
+
+    text-decoration:underline;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .box{
+
+        max-width:90%;
+
+        padding:30px;
+
+    }
+
+    .signup-header h1{
+
+        font-size:30px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .box{
+
+        padding:25px;
+
+    }
+
+    .signup-header h1{
+
+        font-size:26px;
+
+    }
+
+    main input,
+    main button{
+
+        padding:12px;
+
+        font-size:15px;
+
+    }
+
+    footer p{
+
+        font-size:13px;
+
+    }
+
+}
